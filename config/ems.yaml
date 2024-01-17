@@ -1,0 +1,22 @@
+model:
+  tensor_shape: !!python/tuple [72, 69]
+  data_type: 'count'
+  rank: 3
+  num_inducing: 50
+  prior_precision: 0.1
+  zeta: 20.
+  init_lr: 0.1
+  adapt_lr: false
+  n_mc: 5
+
+kernel:
+  band_width: 1.
+
+train:
+  optimizer: 'adam'
+  epoch: 400
+  lr: 0.001
+  batch_size: 128
+  mile_stones: !!python/tuple [0.6, 0.9]
+  save_model_int: 10
+  eval_int: 1

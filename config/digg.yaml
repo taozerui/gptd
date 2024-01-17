@@ -1,0 +1,21 @@
+model:
+  tensor_shape: !!python/tuple [581, 124, 48]
+  data_type: 'binary'
+  rank: 10
+  num_inducing: 50
+  prior_precision: 0.1
+  init_lr: 0.2
+  adapt_lr: false
+  n_mc: 5
+
+kernel:
+  band_width: 1.
+
+train:
+  optimizer: 'adam'
+  epoch: 500
+  lr: 0.001
+  batch_size: 128
+  mile_stones: !!python/tuple [0.2, 0.4, 0.6, 0.8]
+  save_model_int: 100
+  eval_int: 1
